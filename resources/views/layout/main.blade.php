@@ -18,13 +18,38 @@
         
         <!-- Css da Aplicação -->
         <link rel="stylesheet" href="/css/styles.css">
-        <script src="/js/scripts.js"></script>
     <body>
-        {{-- Layout Padrão --}}
-
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                    <img id="img" src="/img/33076702_8002366.svg" alt="Logo" class="d-inline-block align-text-top">
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="/events/create">Criar Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="/">Entrar</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="/">Cadastrar</a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
         @yield('content')
         <footer>
-            <p>IVICI &copy; 2023</p>
+            <p>ivici Soluções &copy; 2023</p>
         </footer>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="/js/scripts.js"></script>
     </body>
 </html>

@@ -18,38 +18,40 @@
         
         <!-- Css da Aplicação -->
         <link rel="stylesheet" href="/css/styles.css">
+    </head>
     <body>
         <header>
             <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbar">
                     <a class="navbar-brand" href="#">
-                    <img id="img" src="/img/33076702_8002366.svg" alt="Logo" class="d-inline-block align-text-top">
+                        <img id="img" src="/img/33076702_8002366.svg" alt="Logo">
                     </a>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Eventos</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="/events/create">Criar Eventos</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="/">Entrar</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="/">Cadastrar</a>
-                        </li>
-                    </ul>
-                    </div>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Eventos</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="/events/create">Criar Eventos</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="/">Entrar</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="/">Cadastrar</a>
+                            </li>
+                        </ul>
                 </div>
             </nav>
         </header>
         @yield('content')
+        <!-- ionicons -->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <!-- JavaScript da Aplicação -->
+        <script src="/js/scripts.js"></script>
         <footer>
             <p>ivici Soluções &copy; 2023</p>
         </footer>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-        <script src="/js/scripts.js"></script>
     </body>
 </html>

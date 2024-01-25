@@ -23,22 +23,38 @@
         <header>
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="collapse navbar-collapse" id="navbar">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="/">
                         <img id="img" src="/img/33076702_8002366.svg" alt="Logo">
                     </a>
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Eventos</a>
+                                <a class="nav-link active" aria-current="page" href="/">Eventos</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="/events/create">Criar Eventos</a>
+                                <a class="nav-link" href="/events/create">Criar Eventos</a>
+                            </li>
+                            @auth
+                            <li class="nav-item">
+                                <a class="nav-link" href="/dashboard">Meus Eventos</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="/">Entrar</a>
+                                <form action="/logout" method="POST">
+                                    @csrf
+                                    <button type="button" class="nav-link" 
+                                    onclick="event.preventDefault();
+                                    this.closest('form').submit();
+                                    ">Sair</button>
+                                </form>
+                            </li>
+                            @endauth
+                            @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="/login">Entrar</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="/">Cadastrar</a>
+                                <a class="nav-link" href="/register">Cadastrar</a>
                             </li>
+                            @endguest
                         </ul>
                 </div>
             </nav>
